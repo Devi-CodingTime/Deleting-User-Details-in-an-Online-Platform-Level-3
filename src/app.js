@@ -20,7 +20,7 @@ app.delete("/api/v1/details/:id",(req,res)=>{
   
   if(!deletedUsers)
   {
-    res.status(404).send({status: "failed", message: "User not found!" })
+    return res.status(404).send({status: "failed", message: "User not found!" })
   }
   const index = userDetails.indexOf(deletedUsers);
 
